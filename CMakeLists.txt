@@ -28,9 +28,9 @@ set (ARM64 "^(arm|ARM|A|aarch|AARCH)64$")
 
 if (MIMICK_TARGET_ARCH)
   set(_ARCH "${MIMICK_TARGET_ARCH}")
-elif (CMAKE_GENERATOR_PLATFORM)
+elseif (CMAKE_GENERATOR_PLATFORM)
   set(_ARCH "${CMAKE_GENERATOR_PLATFORM}")
-else()
+else ()
   set(_ARCH "${CMAKE_SYSTEM_PROCESSOR}")
 endif()
 
